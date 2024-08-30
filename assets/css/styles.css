@@ -149,13 +149,12 @@ body {
 .main-content {
     flex: 1;
     padding: 15px;
-    margin-left: 250px; /* Sidebar width */
     position: relative;
 }
 
 .user-header {
     background-color: #ffffff;
-    padding: 7px 15px;
+    padding: 17px 15px;
     position: fixed; /* Changed from absolute to fixed */
     top: 0;
     right: 0;
@@ -179,7 +178,6 @@ body {
 }
 
 .user-header .user-info .user-name {
-    font-weight: bold;
     font-size: 16px;
     margin-right: 10px; /* Added spacing between name and role */
 }
@@ -187,4 +185,16 @@ body {
 .user-header .user-info .user-role {
     font-size: 14px;
     color: rgba(0, 0, 0, 0.7);
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
 }
