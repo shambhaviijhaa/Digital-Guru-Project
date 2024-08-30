@@ -2,6 +2,9 @@ body {
     background-color: #f8f9fa;
     margin: 0;
     font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 .sidebar {
@@ -10,16 +13,18 @@ body {
     color: white;
     padding: 15px;
     width: 250px;
-    position: relative; /* For positioning the circle */
+    position: relative;
+    display: flex;
+    flex-direction: column;
 }
-.h4, h4 {
-    font-size: 1.2rem;
-}
+
 .sidebar h4 {
     text-align: center;
     font-weight: bold;
     margin-bottom: 20px;
     padding-bottom: 20px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .dashboard {
@@ -32,20 +37,22 @@ body {
     display: flex;
     align-items: center;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .dashboard i {
-    margin-right: 10px; /* Space between icon and text */
+    margin-right: 10px;
 }
 
 .sep {
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     margin: 10px 0;
+}
+
+.nav {
     display: block;
 }
-.nav{
-    display: block;
-}
+
 .nav-link {
     color: white;
     display: flex;
@@ -135,5 +142,49 @@ body {
 }
 
 .left-arrow-circle i {
-    font-size: 18px; /* Adjust the size of the arrow icon */
+    font-size: 18px;
+}
+
+/* Main content area */
+.main-content {
+    flex: 1;
+    padding: 15px;
+    margin-left: 250px; /* Sidebar width */
+    position: relative;
+}
+
+.user-header {
+    background-color: #ffffff;
+    padding: 7px 15px;
+    position: fixed; /* Changed from absolute to fixed */
+    top: 0;
+    right: 0;
+    width: calc(100% - 250px); /* Adjust width based on sidebar width */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.user-header .user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-header .user-info i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.user-header .user-info .user-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-right: 10px; /* Added spacing between name and role */
+}
+
+.user-header .user-info .user-role {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
 }
