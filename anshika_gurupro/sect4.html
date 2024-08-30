@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Property</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="sect4.css">    
+</head>
+<body>
+    <div class="anshika_">
+        <div class="top-bar">
+            <h1>Add Property</h1>
+            <button onclick="goBack()">Back</button>
+        </div>
+        <div class="text-section ">
+            <h6>Plan Images Section Step 4 / 6</h6>
+        </div>
+
+        <div class="image-container">
+            <div class="image-row">
+                <div class="plan-box">
+                    <img src="https://tse2.mm.bing.net/th?id=OIP.KrbiHcYWYK3skoH3A8UCwAHaGN&pid=Api&P=0&h=180" alt="Master Plan">
+                    <h3>Master Plan</h3>
+                </div>
+                <div class="plan-box">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.lj8K0_R3gUaL6xzcn1TkjAAAAA&pid=Api&P=0&h=180" alt="Floor Plan">
+                    <h3>Floor Plan</h3>
+                </div>
+                <div class="plan-box">
+                    <img src="https://tse1.mm.bing.net/th?id=OIP.lj8K0_R3gUaL6xzcn1TkjAAAAA&pid=Api&P=0&h=180" alt="Floor Plan">
+                    <h3>Floor Plan</h3>
+                </div>
+            </div>
+            <div class="vertical-text">
+                Site & Floor Plan
+            </div>
+        </div>
+
+        <form id="planForm" class="container">
+            <div class="plan-row row mt-4">
+                <div class="col-md-4">
+                    <label for="amenityName">Plan Name*</label>
+                    <input type="text" class="form-control" id="amenityName" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="uploadImage">Upload Banner Images (444px x 287px)*</label>
+                    <input type="file" class="form-control-file" id="uploadImage" required>
+                </div>
+                <div class="col-md-4 d-flex align-items-end">
+                    <button type="button" class="btn btn-success mr-2" onclick="addRow()">Add Row</button>
+                    <button type="button" class="btn btn-danger" onclick="deleteRow(this)">Delete Row</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="bottom-buttons">
+            <button id="anshi_back" onclick="goBack()">Back</button>
+            <button id="anshi_next" onclick="goNext()">Next</button>
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="sect4.js"></script>
+</body>
+</html>
