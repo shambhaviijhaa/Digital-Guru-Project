@@ -1,3 +1,56 @@
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        position: fixed;
+        height: 100%;
+        z-index: 1000;
+        left: -100%;
+        transition: left 0.3s ease;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    .dashboard, .nav-link {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .sub-item .nav-link {
+        padding-left: 25px;
+        font-size: 16px;
+    }
+
+    .left-arrow-circle {
+        left: 10px;
+        transform: translate(0, 50%);
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar h4 {
+        font-size: 1rem;
+    }
+
+    .dashboard, .nav-link {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .sub-item .nav-link {
+        padding-left: 20px;
+        font-size: 14px;
+    }
+
+    .left-arrow-circle {
+        left: 5px;
+        transform: translate(0, 50%);
+        width: 30px;
+        height: 30px;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     #sidebar-wrapper {
