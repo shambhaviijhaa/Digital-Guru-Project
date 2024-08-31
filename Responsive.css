@@ -1,0 +1,8 @@
+@media (max-width: 768px) {
+    #sidebar-wrapper {
+        max-width: 100%;
+    }
+    #page-content-wrapper {
+        padding: 0;
+    }
+}
