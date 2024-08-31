@@ -1,8 +1,63 @@
+/* Responsive Design */
 @media (max-width: 768px) {
     #sidebar-wrapper {
-        max-width: 100%;
+        display: none;
     }
+
     #page-content-wrapper {
-        padding: 0;
+        padding: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .ms-auto {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    .profile-dropdown {
+        justify-content: flex-end;
+    }
+
+    .dropdown-menu {
+        right: 0;
+        left: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    #wrapper.toggled #sidebar-wrapper {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-dropdown {
+        position: static;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .profile-icon {
+        margin-right: auto;
+        margin-left: 0;
+    }
+
+    .dropdown-menu {
+        position: relative;
+        width: 100%;
     }
 }
