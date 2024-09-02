@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Sidebar</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../Raksha/Dashboard3.css">
+    <!-- <link rel="stylesheet" href="assets/css/responsive.css"> -->
+</head>
+<body>
+    <div class="sidebar">
+        <h4>MASTER ADMIN</h4>
+        <ul class="nav flex-column">
+            <p class="dashboard">
+                <i class="fas fa-tachometer-alt"></i> <!-- Meter Icon -->
+                Dashboard
+            </p>
+            <li class="nav-item sep" id="sepManageProperty"></li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#managePropertyCollapse" role="button" aria-expanded="false" aria-controls="managePropertyCollapse">
+                    <i class="fas fa-cogs"></i> <!-- Settings Icon -->
+                    Manage Property
+                    <i class="fas fa-chevron-right ml-auto"></i> <!-- Right Arrow Icon -->
+                </a>
+                <div class="collapse" id="managePropertyCollapse">
+                    <div class="sub-item-container">
+                        <ul class="nav flex-column sub-item">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Add Property</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Properties</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item " id="sepManageEnquiry"></li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-cogs"></i> <!-- Settings Icon -->
+                    Manage Enquiry
+                    <i class="fas fa-chevron-right ml-auto"></i> <!-- Right Arrow Icon -->
+                </a>
+            </li>
+            <li class="nav-item sep">
+                <div class="left-arrow-circle">
+                    <i class="fas fa-chevron-left"></i> <!-- Left Arrow Icon -->
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <div class="user-header">
+            <div class="user-info">
+                
+                <div class="user-details">
+                    <div class="user-name">John Doe</div>
+                </div>
+                <i class="fas fa-user-circle"></i> <!-- User Icon -->
+            </div>
+        </div>
+        <!-- Your main content goes here -->
+        <div class="d-flex" id="wrapper">
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            
+                </nav>
+    
+                <div class="container-fluid mt-4">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        Login Successfully.
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+    
+                    <h1 class="mt-4">Property Dashboard</h1>
+    
+                    <!-- Property Overview Section -->
+                    <div class="row mt-4">
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <div class="card card-total-properties text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Properties</h5>
+                                    <p class="card-text">120</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <div class="card card-available-properties text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Available Properties</h5>
+                                    <p class="card-text">30</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <div class="card card-rented-sold text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rented/Sold</h5>
+                                    <p class="card-text">90</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
+                            <div class="card card-inquiries text-center">
+                                <div class="card-body">
+                                    <h5 class="card-title">Inquiries</h5>
+                                    <p class="card-text">50</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Latest Inquiries Section -->
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 mb-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    Latest Inquiries
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item"><a href="#" class="text-decoration-none">John Doe - Interested in Property #101</a></li>
+                                        <li class="list-group-item"><a href="#" class="text-decoration-none">Jane Smith - Inquiry about Property #102</a></li>
+                                        <li class="list-group-item"><a href="#" class="text-decoration-none">Michael Brown - Interested in Rental #103</a></li>
+                                        <li class="list-group-item"><a href="#" class="text-decoration-none">Emily Johnson - Inquiry about Purchase #104</a></li>
+                                        <li class="list-group-item"><a href="#" class="text-decoration-none">Alex Wilson - Inquiry about Property #105</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Revenue Overview Section -->
+                        <div class="col-lg-6 col-md-12 mb-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    Revenue Overview
+                                </div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Revenue</h5>
+                                    <p class="card-text">$120,000</p>
+                                    <h5 class="card-title">Monthly Revenue</h5>
+                                    <p class="card-text">$10,000</p>
+                                    <h5 class="card-title">Pending Payments</h5>
+                                    <p class="card-text">$5,000</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Notifications Section -->
+                    <div class="row">
+                        <div class="col-12 mb-4">
+                            <div class="card">
+                                <div class="card-header">
+                                    Notifications
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item"><a href="#" class="text-decoration-none">Property #106 requires maintenance.</a></li>
+                                        <li class="list-group-item"><a href="#" class="text-decoration-none">Follow-up required with client on Property #102.</a></li>
+                                        <li class="list-group-item"><a href="#" class="text-decoration-none">Rental agreement expiring for Property #107.</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+         <!-- Footer -->
+    <footer class="footer">
+        <p>Copyright &copy; Your Website 2024</p>
+    </footer>
+    </div>
+    <script src="assets/js/script.js"></script>
+    <script src="../Raksha/Dashboard3.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

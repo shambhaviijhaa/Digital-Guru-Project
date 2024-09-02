@@ -1,11 +1,10 @@
-/* General Styling */
 body {
-    overflow-x: hidden;
-}
-
-#wrapper {
+    background-color: #f8f9fa;
+    margin: 0;
+    font-family: Arial, sans-serif;
     display: flex;
-    align-items: stretch;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 .sidebar {
@@ -55,6 +54,16 @@ body {
 }
 
 .nav-link {
+    /* color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none; */
+
     color: white;
     display: flex;
     align-items: center;
@@ -66,16 +75,23 @@ body {
     text-decoration: none;
 }
 
-.nav-link.active {
+/* .nav-link.active {
     background-color: #3949ab;
     color: white;
     font-weight: bold;
 }
-
+*/
 .nav-link:hover {
     background-color: #5c6bc0;
     color: white;
     text-decoration: none;
+}
+
+.nav-link.active,
+.nav-link:focus{
+    background-color: #3949ab; /* Set background to your primary color */
+    color: white; /* Ensure the text remains white */
+    font-weight: bold;
 }
 
 .nav-link i {
@@ -109,14 +125,21 @@ body {
     border-radius: 5px;
 }
 
-.sub-item .nav-link:hover {
+ .sub-item .nav-link:hover {
     background-color: #e0e0e0;
     color: #333;
 }
 
-.sub-item .nav-link.active {
+/*.sub-item .nav-link.active {
     background-color: #3949ab;
     color: white;
+} */
+
+.sub-item .nav-link.active,
+.sub-item .nav-link:focus {
+    background-color: #3949ab; /* Set background to your primary color */
+    color: white; /* Ensure the text remains white */
+    font-weight: bold;
 }
 
 .collapse.show {
@@ -146,6 +169,55 @@ body {
     font-size: 18px;
 }
 
+/* Main content area */
+.main-content {
+    flex: 1;
+    padding: 15px;
+    position: relative;
+    overflow-y: auto;
+    height: 100vh; 
+}
+
+.user-header {
+    background-color: #ffffff;
+    padding: 17px 15px;
+    position: fixed; /* Changed from absolute to fixed */
+    top: 0;
+    right: 0;
+    width: calc(100% - 250px); /* Adjust width based on sidebar width */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.user-header .user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-header .user-info i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.user-header .user-info .user-name {
+    font-size: 16px;
+    margin-right: 10px; /* Added spacing between name and role */
+}
+
+.user-header .user-info .user-role {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
 #page-content-wrapper {
     flex: 1;
     min-width: 0;
@@ -161,28 +233,12 @@ body {
     padding: 0.5rem 1rem;
 }
 
-.sidebar-heading {
-    padding: 1rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: white;
-}
-
 .list-group-item {
     transition: all 0.2s ease;
 }
 
 .list-group-item:hover {
     background-color: #365486;
-    color: white;
-}
-
-#logout-btn {
-    transition: all 0.2s ease;
-}
-
-#logout-btn:hover {
-    background-color: #ff4d4d;
     color: white;
 }
 
@@ -231,7 +287,15 @@ a.text-decoration-none:hover {
     transition: margin 0.25s ease-out;
 }
 
-footer {
-    background-color: #f8f9fa;
-    border-top: 1px solid #e7e7e7;
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
 }
