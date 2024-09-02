@@ -1,0 +1,301 @@
+body {
+    background-color: #f8f9fa;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    background-color: #3949ab;
+    min-height: 100vh;
+    color: white;
+    padding: 15px;
+    width: 250px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h4 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dashboard {
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.dashboard i {
+    margin-right: 10px;
+}
+
+.sep {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 10px 0;
+}
+
+.nav {
+    display: block;
+}
+
+.nav-link {
+    /* color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none; */
+
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* .nav-link.active {
+    background-color: #3949ab;
+    color: white;
+    font-weight: bold;
+}
+*/
+.nav-link:hover {
+    background-color: #5c6bc0;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link.active,
+.nav-link:focus{
+    background-color: #3949ab; /* Set background to your primary color */
+    color: white; /* Ensure the text remains white */
+    font-weight: bold;
+}
+
+.nav-link i {
+    margin-right: 10px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item + .nav-item {
+    margin-top: 15px;
+}
+
+.ml-3 {
+    margin-left: 1rem !important;
+}
+
+.sub-item-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.sub-item .nav-link {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 0;
+    border-radius: 5px;
+}
+
+ .sub-item .nav-link:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+/*.sub-item .nav-link.active {
+    background-color: #3949ab;
+    color: white;
+} */
+
+.sub-item .nav-link.active,
+.sub-item .nav-link:focus {
+    background-color: #3949ab; /* Set background to your primary color */
+    color: white; /* Ensure the text remains white */
+    font-weight: bold;
+}
+
+.collapse.show {
+    display: block;
+}
+
+.collapse {
+    display: none;
+}
+
+.left-arrow-circle {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff7a;
+    color: #3949ab;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.left-arrow-circle i {
+    font-size: 18px;
+}
+
+/* Main content area */
+.main-content {
+    flex: 1;
+    padding: 15px;
+    position: relative;
+    overflow-y: auto;
+    height: 100vh; 
+}
+
+.user-header {
+    background-color: #ffffff;
+    padding: 17px 15px;
+    position: fixed; /* Changed from absolute to fixed */
+    top: 0;
+    right: 0;
+    width: calc(100% - 250px); /* Adjust width based on sidebar width */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.user-header .user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-header .user-info i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.user-header .user-info .user-name {
+    font-size: 16px;
+    margin-right: 10px; /* Added spacing between name and role */
+}
+
+.user-header .user-info .user-role {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#page-content-wrapper {
+    flex: 1;
+    min-width: 0;
+    padding: 20px;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease;
+}
+
+.navbar {
+    padding: 0.5rem 1rem;
+}
+
+.list-group-item {
+    transition: all 0.2s ease;
+}
+
+.list-group-item:hover {
+    background-color: #365486;
+    color: white;
+}
+
+/* Card Background Colors */
+.card-total-properties {
+    background-color: #7FC7D9; /* Blue shade */
+    color: white;
+}
+
+.card-available-properties {
+    background-color: #7FC7D9; /* Different blue shade */
+    color: white;
+}
+
+.card-rented-sold {
+    background-color: #7FC7D9; /* Another blue shade */
+    color: white;
+}
+
+.card-inquiries {
+    background-color: #7FC7D9; /* Lighter blue shade */
+    color: white;
+}
+
+/* Hover Effects */
+.card-total-properties:hover,
+.card-available-properties:hover,
+.card-rented-sold:hover,
+.card-inquiries:hover {
+    background-color: #365486;
+}
+
+a.text-decoration-none {
+    color: #000;
+    text-decoration: none;
+}
+
+a.text-decoration-none:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Hide the sidebar when toggled */
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: -250px;
+    transition: margin 0.25s ease-out;
+}
+
+.footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+}
