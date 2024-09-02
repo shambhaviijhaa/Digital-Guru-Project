@@ -53,9 +53,9 @@ window.onload = function() {
 };
 
 function goBack() {
-    window.location.href = "/kirtiP_gurupro/sect3.html"; 
+    window.location.href = "..//kirtiP_gurupro/sect3.html"; 
 }
 
 function goNext() {
-    window.location.href = "/kirtiSet5/set5.html"; 
+    window.location.href = "..//kirtiSet5/set5.html"; 
 }
