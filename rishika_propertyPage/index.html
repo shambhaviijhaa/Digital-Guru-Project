@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Layout with Sidebar</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h4>MASTER ADMIN</h4>
+            <ul class="nav flex-column">
+                <p class="dashboard">
+                    <i class="fas fa-tachometer-alt"></i> <!-- Meter Icon -->
+                    Dashboard
+                </p>
+                <li class="nav-item sep" id="sepManageProperty"></li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="collapse" href="#managePropertyCollapse" role="button"
+                        aria-expanded="false" aria-controls="managePropertyCollapse"
+                        style="justify-content: space-between;">
+                        <i class="fas fa-cogs"></i> <!-- Settings Icon -->
+                        Manage Property
+                        <i class="fas fa-chevron-right ml-auto"></i> <!-- Right Arrow Icon -->
+                    </a>
+                    <div class="collapse" id="managePropertyCollapse">
+                        <div class="sub-item-container">
+                            <ul class="nav flex-column sub-item">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Add Property</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Properties</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item " id="sepManageEnquiry"></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" style="justify-content: space-between;">
+                        <i class="fas fa-cogs"></i> <!-- Settings Icon -->
+                        Manage Enquiry
+                        <i class="fas fa-chevron-right ml-auto"></i> <!-- Right Arrow Icon -->
+                    </a>
+                </li>
+                <li class="nav-item sep">
+                    <div class="left-arrow-circle">
+                        <i class="fas fa-chevron-left"></i> <!-- Left Arrow Icon -->
+                    </div>
+                </li>
+            </ul>
+        </aside>
+
+
+        <div class="main-content">
+            <header class="headernav">
+                <!-- Header navigation content -->
+                <div class="user-header">
+                    <div class="user-info">
+
+                        <div class="user-details">
+                            <div class="user-name">John Doe</div>
+                        </div>
+                        <i class="fas fa-user-circle"></i> <!-- User Icon -->
+                    </div>
+                </div>
+            </header>
+
+            <section class="content">
+                <!-- Main content -->
+                <div class="content-header">
+                    <h1>Properties</h1>
+                    <div class="buttons">
+                        <button class="btn1">Add Property</button>
+                        <button class="btn">Back</button>
+                    </div>
+                </div>
+
+                <div class="container-a">
+                    <h2>Manage Property</h2>
+                    <hr>
+                    <div class="form-container">
+                        <form>
+                            <div class="container-2">
+
+
+                                <div class="one-line">
+                                    <div class="shows">
+                                        <label for="show">Show:</label>
+                                        <select id="show">
+                                            <option value="10">10</option>
+                                            <option value="25">25</option>
+                                            <option value="50">50</option>
+                                        </select>
+                                        <label for="entries">entries</label>
+                                    </div>
+
+                                    <div class="searchs">
+                                        <label for="search">Search:</label>
+                                        <input type="text" id="search" placeholder="Search...">
+                                    </div>
+                                </div>
+
+                                <table style="width:100%">
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Godrej Woodscape</td>
+                                        <td>
+                                            <button class="edit"
+                                                style="background-color: rgb(173, 171, 171);">Edit</button>
+                                            <button class="delete" style="background-color: red;">Delete</button>
+                                            <button class="featured"
+                                                style="background-color: rgb(231, 238, 30);">Already Featured</button>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <div class="pagination">
+                                    <button class="previous">Previous</button>
+                                    <button class="active">1</button>
+                                    <button>2</button>
+                                    <button class="next">Next</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+
+            <footer class="footer">
+                <!-- Footer content -->
+                <p>Copyright &copy; Your Website 2024</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add click event listener to all nav-links within sub-items
+            document.querySelectorAll('.sub-item .nav-link').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    // Remove active class from all nav-links
+                    document.querySelectorAll('.sub-item .nav-link').forEach(function (el) {
+                        el.classList.remove('active');
+                    });
+
+                    // Add active class to the clicked nav-link
+                    this.classList.add('active');
+                });
+            });
+
+            // Handle collapse toggle
+            document.querySelectorAll('[data-toggle="collapse"]').forEach(function (toggle) {
+                toggle.addEventListener('click', function () {
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    const sepElement = document.getElementById(`sep${targetId.charAt(0).toUpperCase() + targetId.slice(1)}`);
+
+                    if (targetElement.classList.contains('show')) {
+                        sepElement.style.display = 'none';
+                    } else {
+                        sepElement.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
