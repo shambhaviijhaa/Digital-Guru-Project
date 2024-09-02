@@ -1,135 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROPERTY</title>
-    <link rel="stylesheet" href="sect3.css">
+    <title>Dashboard Sidebar</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./sect3.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-
 <body>
-    <div class="property-heading">
-        <div class="top-bar">
-            <h2>Add Property</h2>
-            <button class="back_button" onclick="goBack()">Back</button>
-        </div>
-        <div class="property-section"> 
-            <h4 class="Section_price">Price Section Step 3/6</h4>
-        </div>
+    <div class="sidebar">
+        <h4>MASTER ADMIN</h4>
+        <ul class="nav flex-column">
+            <p class="dashboard">
+                <i class="fas fa-tachometer-alt"></i> <!-- Meter Icon -->
+                Dashboard
+            </p>
+            <li class="nav-item sep" id="sepManageProperty"></li>
+            <li class="nav-item">
+                <a class="nav-link" data-toggle="collapse" href="#managePropertyCollapse" role="button" aria-expanded="false" aria-controls="managePropertyCollapse">
+                    <i class="fas fa-cogs"></i> <!-- Settings Icon -->
+                    Manage Property
+                    <i class="fas fa-chevron-right ml-auto"></i> <!-- Right Arrow Icon -->
+                </a>
+                <div class="collapse" id="managePropertyCollapse">
+                    <div class="sub-item-container">
+                        <ul class="nav flex-column sub-item">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Add Property</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Properties</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item " id="sepManageEnquiry"></li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-cogs"></i> <!-- Settings Icon -->
+                    Manage Enquiry
+                    <i class="fas fa-chevron-right ml-auto"></i> <!-- Right Arrow Icon -->
+                </a>
+            </li>
+            <li class="nav-item sep">
+                <div class="left-arrow-circle">
+                    <i class="fas fa-chevron-left"></i> <!-- Left Arrow Icon -->
+                </div>
+            </li>
+        </ul>
     </div>
 
-
-    <div class="content">
-        <div class="container1">
-            <div class="table-container">
-                <table>
-                    <tr>
-                        <th>Type</th>
-                        <th>Saleable Area</th>
-                        <th>Price</th>
-                        <th>Price Breakup</th>
-                    </tr>
-                    <tr>
-                        <td>2 BHK LUXE</td>
-                        <td>1285 Sq. ft.</td>
-                        <td>₹ 1.26 Cr Onwards</td>
-                        <td class="price-breakup">Price Breakup</td>
-                    </tr>
-                    <tr>
-                        <td>3 BHK PREMIUM</td>
-                        <td>1700 Sq. ft.</td>
-                        <td>₹ 1.69 Cr Onwards</td>
-                        <td class="price-breakup">Price Breakup</td>
-                    </tr>
-                    <tr>
-                        <td>3 BHK LUXE</td>
-                        <td>2025 Sq. ft.</td>
-                        <td>₹ 1.99 Cr Onwards</td>
-                        <td class="price-breakup">Price Breakup</td>
-                    </tr>
-                    <tr>
-                        <td>3.5 BHK PREMIUM</td>
-                        <td>2435-2473 Sq. ft.</td>
-                        <td>₹ 2.45 Cr Onwards</td>
-                        <td class="price-breakup">Price Breakup</td>
-                    </tr>
-                    <tr>
-                        <td>4 BHK LUXE</td>
-                        <td>2898 Sq. ft.</td>
-                        <td>₹ 2.99 Cr Onwards</td>
-                        <td class="price-breakup">Price Breakup</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="image-container">
-                <img src="./img1.jpg" alt="Description Image">
-                <p class="price-breakup-descr">Get Complete Costing Deatils</p>
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <div class="user-header">
+            <div class="user-info">
+                
+                <div class="user-details">
+                    <div class="user-name">John Doe</div>
+                </div>
+                <i class="fas fa-user-circle"></i> <!-- User Icon -->
             </div>
         </div>
-    </div>
+        
+        <div class="content-area">
+            <!-- Your main content goes here -->
 
 
-
-
+            <!--section-3 html-->
+        <div class="property-heading">
+            <div class="top-bar">
+                <h2>Add Property</h2>
+                <button class="back_button" onclick="goBack()">Back</button>
+            </div>
+            <div class="property-section"> 
+                <h4 class="Section_price">Price Section Step 3/6</h4>
+            </div>
+        </div>
     
-    <div class="container">
-        <div class="row" id="row-template">
-            <div class="input-group">
-                <label for="type">Type*</label>
-                <input type="text" id="type" name="type[]" placeholder="Type">
-            </div>
-            <div class="input-group">
-                <label for="area">Area*</label>
-                <input type="text" id="area" name="area[]" placeholder="Area">
-            </div>
-            <div class="input-group">
-                <label for="price">Price*</label>
-                <input type="text" id="price" name="price[]" placeholder="Price">
-            </div>
-            <div class="input-group">
-                <label for="price-type">Price Type*</label>
-                <select id="price_type" name="price_type[]" required>
-                    <option value="" disabled selected>Select One</option>
-                    <option value="Type 1">Premium</option>
-                    <option value="Type 2">Dynamic</option>
-                    <option value="Type 2">Geographical</option>
-                </select>
-            </div>
-            <div class="button-group">
-                <button type="button" class="add-row">Add Row</button>
-                <button type="button" class="delete-row">Delete Row</button>
+    
+        <div class="content">
+            <div class="container1">
+                <div class="table-container">
+                    <table>
+                        <tr>
+                            <th>Type</th>
+                            <th>Saleable Area</th>
+                            <th>Price</th>
+                            <th>Price Breakup</th>
+                        </tr>
+                        <tr>
+                            <td>2 BHK LUXE</td>
+                            <td>1285 Sq. ft.</td>
+                            <td>₹ 1.26 Cr Onwards</td>
+                            <td class="price-breakup">Price Breakup</td>
+                        </tr>
+                        <tr>
+                            <td>3 BHK PREMIUM</td>
+                            <td>1700 Sq. ft.</td>
+                            <td>₹ 1.69 Cr Onwards</td>
+                            <td class="price-breakup">Price Breakup</td>
+                        </tr>
+                        <tr>
+                            <td>3 BHK LUXE</td>
+                            <td>2025 Sq. ft.</td>
+                            <td>₹ 1.99 Cr Onwards</td>
+                            <td class="price-breakup">Price Breakup</td>
+                        </tr>
+                        <tr>
+                            <td>3.5 BHK PREMIUM</td>
+                            <td>2435-2473 Sq. ft.</td>
+                            <td>₹ 2.45 Cr Onwards</td>
+                            <td class="price-breakup">Price Breakup</td>
+                        </tr>
+                        <tr>
+                            <td>4 BHK LUXE</td>
+                            <td>2898 Sq. ft.</td>
+                            <td>₹ 2.99 Cr Onwards</td>
+                            <td class="price-breakup">Price Breakup</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="image-container">
+                    <img src="./img1.jpg" alt="Description Image">
+                    <p class="price-breakup-descr">Get Complete Costing Deatils</p>
+                </div>
             </div>
         </div>
-    </div>
     
-      
-
-
-
-
-
-
-
-
-    <div class="bottom-buttons">
-        <button id="anshi_back" onclick="goBack()">Back</button>
-        <button id="anshi_next" onclick="goNext()">Next</button>
-    </div>
-
-    <script>
-        function goBack() {
-            // Add your logic for going back
-            alert("Going back!");
-        }
-
-        function goNext() {
-            // Add your logic for going next
-            alert("Going next!");
-        }
+    
+    
+    
+        
+        <div class="container">
+            <div class="row" id="row-template">
+                <div class="input-group">
+                    <label for="type">Type*</label>
+                    <input type="text" id="type" name="type[]" placeholder="Type">
+                </div>
+                <div class="input-group">
+                    <label for="area">Area*</label>
+                    <input type="text" id="area" name="area[]" placeholder="Area">
+                </div>
+                <div class="input-group">
+                    <label for="price">Price*</label>
+                    <input type="text" id="price" name="price[]" placeholder="Price">
+                </div>
+                <div class="input-group">
+                    <label for="price-type">Price Type*</label>
+                    <select id="price_type" name="price_type[]" required>
+                        <option value="" disabled selected>Select One</option>
+                        <option value="Type 1">Premium</option>
+                        <option value="Type 2">Dynamic</option>
+                        <option value="Type 2">Geographical</option>
+                    </select>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="add-row">Add Row</button>
+                    <button type="button" class="delete-row">Delete Row</button>
+                </div>
+            </div>
+        </div>
+        
           
-    </script>
-    <script src="sect3.js"></script>
-</body>
+    
+    
+    
+    
+    
+    
+    
+    
+        <div class="bottom-buttons">
+            <button id="button1_back" onclick="goBack()">Back</button>
+            <button id="button1_next" onclick="goNext()">Next</button>
+        </div>
+    
+        <script>
+            function goBack() {
+                // Add your logic for going back
+                alert("Going back!");
+            }
+    
+            function goNext() {
+                // Add your logic for going next
+                window.location.href = "/Digital-Guru-Project/anshika_gurupro/sect4.html";
+            }
+              
+        </script>
+            
+        </div>
 
+         <!-- Footer -->
+    <footer class="footer">
+        <p>Copyright &copy; Your Website 2024</p>
+    </footer>
+    </div>
+    <script src="./sect3.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
 </html>
