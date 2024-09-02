@@ -1,6 +1,4 @@
-body{
-    background-color: #f8f9fd;
-}
+
 .text-section {
     padding: 20px;
     background-color: #f5f5f5;
@@ -19,19 +17,19 @@ body{
     align-items: center;
     padding: 10px 20px;
     background-color: #f8f9fd;
-  }
+}
 
-  .top-bar h1 {
+.top-bar h1 {
     margin: 0;
-  }
-  
- .top-bar button {
-      background-color: #007bff;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      cursor: pointer;
-      border-radius: 5px;
+}
+
+.top-bar button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
     }
 
 .owl-carousel .item {
@@ -55,24 +53,19 @@ body{
     justify-content: flex-start;
     padding: 20px;
     background-color: #f8f9fd;
-  }
+}
 
-  .bottom-buttons button {
+.bottom-buttons button {
     color: white;
     border: none;
     padding: 10px 15px;
     margin-right: 10px;
     cursor: pointer;
     border-radius: 5px;
-  }
-  #anshi_back{
-      background-color:grey ;
-  }
-  #anshi_next{
-      background-color:#007bff ;
-  }
-
-.footer {
-    text-align: center;
-    margin-top: 20px;
+}
+#anshi_back{
+    background-color:grey ;
+}
+#anshi_next{
+    background-color:#007bff ;
 }
