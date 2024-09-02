@@ -1,0 +1,78 @@
+body{
+    background-color: #f8f9fd;
+}
+.text-section {
+    padding: 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+    padding-bottom: 0px;
+    padding-top: 8px;
+    margin-top: 5px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fd;
+  }
+
+  .top-bar h1 {
+    margin: 0;
+  }
+  
+ .top-bar button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+.owl-carousel .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.owl-carousel .item img {
+    max-width: 90%;
+    max-height: 287px;
+    border-radius: 10px;
+}
+
+.amenity-row {
+    margin-bottom: 20px;
+}
+.bottom-buttons {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: #f8f9fd;
+  }
+
+  .bottom-buttons button {
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  #anshi_back{
+      background-color:grey ;
+  }
+  #anshi_next{
+      background-color:#007bff ;
+  }
+
+.footer {
+    text-align: center;
+    margin-top: 20px;
+}

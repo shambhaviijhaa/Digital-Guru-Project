@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Property</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./assets/css/set5.css">
+</head>
+<body>
+    <div class="top-bar">
+        <h3>Add Property</h3>
+        <button onclick="goBack()">Back</button>
+      </div>
+      <div class="text-section ">
+        <h6 >Plan Images Section Step 4 / 6</h6>
+    </div>
+    <div class="container mt-5">
+        <div class="owl-carousel owl-theme">
+            <div class="item"><img src="./images/download.jpeg" alt="Swimming Pool"></div>
+            <div class="item"><img src="./images/gym.jpeg" alt="Gym"></div>
+            <div class="item"><img src="./images/jogging.jpeg" alt="Jogging Park"></div>
+            <div class="item"><img src="./images/spa.jpeg" alt="Spa"></div>
+            <div class="item"><img src="./images/tennis.jpeg" alt="Tennis Court"></div>
+            <div class="item"><img src="./images/play.jpeg" alt="Playground"></div>
+            <div class="item"><img src="./images/basket.jpeg" alt="Basketball Court"></div>
+            <div class="item"><img src="./images/library.jpeg" alt="Library"></div>
+            <div class="item"><img src="./images/garden.jpeg" alt="Garden"></div>
+        </div>
+
+        <form id="amenitiesForm">
+            <div class="amenity-row row mt-4">
+                <div class="col-md-4">
+                    <label for="amenityName">Amenity Name*</label>
+                    <input type="text" class="form-control" id="amenityName" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="uploadImage">Upload Image (444px x 287px)*</label>
+                    <input type="file" class="form-control-file" id="uploadImage" required>
+                </div>
+                <div class="col-md-4 d-flex align-items-end">
+                    <button type="button" class="btn btn-success mr-2" onclick="addRow()">Add Row</button>
+                    <button type="button" class="btn btn-danger" onclick="deleteRow(this)">Delete Row</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="bottom-buttons">
+            <button id="anshi_back" onclick="goBack()">Back</button>
+            <button id="anshi_next" onclick="goNext()">Next</button>
+          </div>
+    </div>
+
+    <div class="footer">
+        <p>Copyright © Your Website 2024</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="./assets/js/set5.js"></script>
+</body>
+</html>
