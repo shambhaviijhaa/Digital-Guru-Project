@@ -148,8 +148,10 @@ body {
 /* Main content area */
 .main-content {
     flex: 1;
-    padding: 15px;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .user-header {
@@ -197,4 +199,10 @@ body {
     padding: 10px;
     font-size: 14px;
     border-top: 1px solid #ddd;
+}
+.content-area {
+    flex: 1;
+    overflow-y: auto;
+    padding-top: 85px;
+    padding-bottom: 60px;
 }
