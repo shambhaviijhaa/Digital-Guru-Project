@@ -53,11 +53,9 @@ window.onload = function() {
 };
 
 function goBack() {
-    // Add your logic for going back
-    alert("Going back!");
+    window.location.href = "/kirtiP_gurupro/sect3.html"; 
 }
 
 function goNext() {
-    // Add your logic for going next
-    alert("Going next!");
+    window.location.href = "/kirtiSet5/set5.html"; 
 }
