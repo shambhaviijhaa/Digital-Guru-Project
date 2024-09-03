@@ -262,7 +262,7 @@ body {
     cursor: pointer;
     border: none;
     border-radius: 3px;
-    background-color: #065b33;
+    background-color: #515352;
     color: white;
   }
   #button1_next{
@@ -293,41 +293,58 @@ table {
 }
 
 table, th, td {
-    border: 1px solid #333;
+    border-left: 1px solid #ded7d7; /* Vertical borders */
+    border-right: 1px solid #ded7d7; /* Vertical borders */
+    border-top: 1px solid #f2f2f2; /* No horizontal border at the top */
+    border-bottom: 1px solid #f2f2f2; /* No horizontal border at the bottom */
     padding: 10px;
     text-align: center;
 }
 
 .price-breakup {
-    background-color: #35424a;
+    background-color: #35424a; /* Match the table's background color */
     color: #ffffff;
     text-align: center;
     font-weight: bold;
-    padding: 1% 5%;
+    padding: 10px; /* Adds space inside the box */
+    margin: 10px; /* Adds space outside the box */
+    border: none; /* Optional: remove default border */
+    border-radius: 5px; /* Optional: add rounded corners */
+    display: inline-block; /* Use flexbox to center content */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
 }
 
 .image-container {
-    margin-top: 50px;
-    width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    border: 1px solid #ded7d7; /* Same border as the image */
+    margin-left: 10%;
+    margin-top: 50px;
+    padding: 10px; /* Optional: add padding around the content */
+    background-color: #f5f5f5; /* Optional: background color to match the border */
 }
 
 .image-container img {
     max-width: 100%;
     height: auto;
     filter: blur(2px);
-    border: 1px solid black;
+    border-bottom: 1px solid black; /* Border at the bottom of the image */
 }
-.price-breakup-descr{
+
+.price-breakup-descr {
     background-color: #35424a;
     color: #ffffff;
     text-align: center;
     font-weight: bold;
     padding: 4% 17.5%;
+    border-top: 1px solid black; /* Border at the top of the description */
+    width: 100%; /* Ensure description spans the full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
+
 
 .table-container tr:nth-child(even) {
     background-color: #f2f2f2; /* Light grey color for even rows */
