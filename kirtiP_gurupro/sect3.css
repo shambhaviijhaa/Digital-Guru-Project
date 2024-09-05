@@ -1,23 +1,227 @@
 body {
-    background-color: white;
-    padding: 20px;
-    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
     margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    background-color: #3949ab;
+    min-height: 100vh;
+    color: white;
+    padding: 15px;
+    width: 250px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar h4 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dashboard {
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.dashboard i {
+    margin-right: 10px;
+}
+
+.sep {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 10px 0;
+}
+
+.nav {
+    display: block;
+}
+
+.nav-link {
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav-link.active {
+    background-color: #3949ab;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    background-color: #5c6bc0;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link i {
+    margin-right: 10px;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-item + .nav-item {
+    margin-top: 15px;
+}
+
+.ml-3 {
+    margin-left: 1rem !important;
+}
+
+.sub-item-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.sub-item .nav-link {
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 0;
+    border-radius: 5px;
+}
+
+.sub-item .nav-link:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.sub-item .nav-link.active {
+    background-color: #3949ab;
+    color: white;
+}
+
+.collapse.show {
+    display: block;
+}
+
+.collapse {
+    display: none;
+}
+
+.left-arrow-circle {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff7a;
+    color: #3949ab;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.left-arrow-circle i {
+    font-size: 18px;
+}
+
+/* Main content area */
+.main-content {
+    flex: 1;
     display: flex;
     flex-direction: column;
     height: 100vh;
+    overflow: hidden;
+}
+
+.user-header {
+    background-color: #ffffff;
+    padding: 17px 15px;
+    position: fixed; /* Changed from absolute to fixed */
+    top: 0;
+    right: 0;
+    width: calc(100% - 250px); /* Adjust width based on sidebar width */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added shadow */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.user-header .user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-header .user-info i {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.user-header .user-info .user-name {
+    font-size: 16px;
+    margin-right: 10px; /* Added spacing between name and role */
+}
+
+.user-header .user-info .user-role {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.7);
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border-top: 1px solid #ddd;
+}
+.content-area {
+    flex: 1;
+    overflow-y: auto;
+    padding-top: 85px;
+    padding-bottom: 60px;
 }
 
 
+
+
+
+/*section-3 css*/
 .property-heading{
     background: linear-gradient(to bottom, rgb(243, 244, 246), rgb(255, 255, 255));
     width: 100%;
-    margin: 20px auto;
+    margin-left: 1px;
     color: #656161;
     border-bottom: 2px solid rgb(205, 200, 200); /* Black line under the text */
 }
 
 .top-bar {
+    margin-left: 1px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,16 +256,16 @@ body {
     margin-bottom: 15px;
 }
 
-  #anshi_back{
-    margin: 5px 0;
+  #button1_back{
+    margin-left: 10px;
     padding: 5px 10px;
     cursor: pointer;
     border: none;
     border-radius: 3px;
-    background-color: #065b33;
+    background-color: #515352;
     color: white;
   }
-  #anshi_next{
+  #button1_next{
     margin: 5px 0;
     padding: 5px 10px;
     cursor: pointer;
@@ -81,46 +285,66 @@ body {
 }
 
 table {
+    margin-top: 50px;
+    margin-left: 30px;
     width: 100%;
     border-collapse: collapse;
     margin-right: 20px;
 }
 
 table, th, td {
-    border: 1px solid #333;
+    border-left: 1px solid #ded7d7; /* Vertical borders */
+    border-right: 1px solid #ded7d7; /* Vertical borders */
+    border-top: 1px solid #f2f2f2; /* No horizontal border at the top */
+    border-bottom: 1px solid #f2f2f2; /* No horizontal border at the bottom */
     padding: 10px;
     text-align: center;
 }
 
 .price-breakup {
-    background-color: #35424a;
+    background-color: #35424a; /* Match the table's background color */
     color: #ffffff;
     text-align: center;
     font-weight: bold;
-    padding: 1% 5%;
+    padding: 10px; /* Adds space inside the box */
+    margin: 10px; /* Adds space outside the box */
+    border: none; /* Optional: remove default border */
+    border-radius: 5px; /* Optional: add rounded corners */
+    display: inline-block; /* Use flexbox to center content */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
 }
 
 .image-container {
-    width: 50%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    border: 1px solid #ded7d7; /* Same border as the image */
+    margin-left: 10%;
+    margin-top: 50px;
+    padding: 10px; /* Optional: add padding around the content */
+    background-color: #f5f5f5; /* Optional: background color to match the border */
 }
 
 .image-container img {
     max-width: 100%;
     height: auto;
     filter: blur(2px);
-    border: 1px solid black;
+    border-bottom: 1px solid black; /* Border at the bottom of the image */
 }
-.price-breakup-descr{
+
+.price-breakup-descr {
     background-color: #35424a;
     color: #ffffff;
     text-align: center;
     font-weight: bold;
     padding: 4% 17.5%;
+    border-top: 1px solid black; /* Border at the top of the description */
+    width: 100%; /* Ensure description spans the full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
+
 
 .table-container tr:nth-child(even) {
     background-color: #f2f2f2; /* Light grey color for even rows */
@@ -147,7 +371,7 @@ table, th, td {
 .container {
     background-color: white;
     width: 100%;
-    margin: 10px auto;
+    margin-top: 50px;
     display: flex;
     flex-direction: column; /* Stack rows vertically */
     gap: 2px; /* Optional: Adds spacing between rows */
@@ -191,7 +415,7 @@ table, th, td {
     cursor: pointer;
     border: none;
     border-radius: 3px;
-    background-color: #007BFF;
+    background-color: #065b33;
     color: white;
 }
 
