@@ -45,6 +45,23 @@
     border-radius: 10px;
 }
 
+.image-container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+
+.image-row {
+    display: flex;
+    justify-content:left;
+    width: 100%;
+    display: flex;
+    gap: 30px; 
+}
 .amenity-row {
     margin-bottom: 20px;
 }
